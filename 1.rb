@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-
 def multiples_up_to(multiple, limit)
   (1..limit - 1).select { |x| x % multiple == 0}
 end
