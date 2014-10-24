@@ -19,16 +19,12 @@ def written(n)
   
   if tens == 1
     output += EXCEPTIONS[tens * 10 + ones]
-    puts output
     return output
   end
 
   output += TENS[tens] if tens != 1 && tens != 0
   output += "-" unless ones == 0 || tens == 0
   output += ONES[ones]
-
-  puts output
-  output
 end
 
 puts (1..1000).map { |n| written(n) }.map { |written_word| written_word.scan(/\w/).count }.inject(:+)
