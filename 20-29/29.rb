@@ -3,8 +3,8 @@
 require "set"
 
 s = Set.new
-2.upto(1000).each do |a|
-  2.upto(1000).each do |b|
+2.upto(100).each do |a|
+  2.upto(100).each do |b|
     s << a**b
   end
 end
