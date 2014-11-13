@@ -9,6 +9,8 @@ def cycles(s)
 end
 
 def is_circular?(n)
+  return true if n == 2 || n == 5
+  return false if n.to_s =~ /\d*[245680]\d*/
   cycles(n.to_s).reduce(true) {|r,e| r && Prime.prime?(e.to_i) }
 end
 
